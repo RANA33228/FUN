@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(239, 243, 247);
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="password"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            font-weight: bold;
+            color: red;
+        }
+
+        #content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 20%; /* Medium size */
+            display: block;
+            margin: 0 auto;
+        }
+
+        video {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="button" onclick="checkPassword()">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <!-- Placeholder for photos or videos -->
+    <div id="content">
+        <!-- You can add your photos or videos here -->
+        <img src="D:\e.jpg" alt="Image">
+        <video controls>
+            <source src="your_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById("password").value;
+            var correctPassword = "8918"; // Replace with your desired password
+
+            if (enteredPassword === correctPassword) {
+                // Display the content div
+                document.getElementById("content").style.display = "block";
+                document.getElementById("message").textContent = "Login successful!";
+            } else {
+                document.getElementById("message").textContent = "Incorrect password. Try again.";
+            }
+        }
+    </script>
+</body>
+</html>
